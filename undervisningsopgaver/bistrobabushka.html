@@ -1,0 +1,386 @@
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #95949A;
+        }
+        /*MENU*/
+
+        footer {
+            z-index: 99999;
+            border-bottom-color: darkgrey;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        footer img {
+            width: 40%;
+        }
+
+        .footer .dropdown {
+            position: relative;
+            display: inline-block;
+            color: white;
+        }
+
+        .footer .dropdown {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .footer .dropdown:hover {
+            opacity: 1.0;
+            filter: alpha(opacity=100);
+        }
+
+        #splash .logo {
+            padding: 20px;
+            width: 15vw;
+            box-sizing: content-box;
+        }
+
+        #splash .logo img {
+            width: 100%;
+        }
+
+        @media screen and (min-width: 376px) and (orientation: portrait) {}
+
+        #luk {
+            color: black;
+        }
+
+        button:hover {
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+        }
+
+        button {
+            font-size: 1.7rem;
+            background-color: #95949A;
+            display: inline-block;
+            border-bottom-style: inherit;
+            border-color: #CFB53B;
+            border-width: 0.3vw;
+            font-family: Varela Round;
+            color: black;
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            color: gray max-height: 0px;
+            overflow: hidden;
+            transition: 0.6s;
+        }
+
+        .show {
+            max-height: 500px;
+        }
+
+        .change .bar1 {
+            transform: rotate(-45deg) translate(-9px, 6px)
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            transform: rotate(45deg) translate(-8px, -8px)
+        }
+
+        .burger {
+            cursor: pointer;
+            background-color: #95949A;
+            border: none;
+            justify-self: end;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .templatemodtager {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1000px;
+            margin: 0 auto;
+            grid-gap: 10px;
+        }
+
+        .person:hover {
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+        }
+
+        .person {
+            text-align: center;
+            font-family: Open Sans Condense;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .person img {
+            max-width: 100%;
+            filter: grayscale(20%);
+            filter: contrast(80%);
+            filter: sepia(20%);
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+        }
+
+        .person .navn {
+            height: 70px;
+            text-align: center;
+            color: black;
+            font-size: 1.5rem;
+            font-family: Varela Round;
+        }
+
+        .kortBeskrivelse:nth-child(even) {
+            background: white;
+            padding: 0.5em 1em;
+        }
+
+        .kortBeskrivelse:nth-child(odd) {
+            background: #ccc;
+            padding: 0.5em 1em;
+        }
+
+        .popup {
+            max-width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            visibility: hidden;
+            background-color: #95949A;
+        }
+
+        .popup-content {
+            background-color: #95949A;
+            position: absolute;
+            align-self: center;
+            z-index: 100;
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+        }
+
+        .popup img {
+            align-self: center;
+            max-width: 100%;
+            -moz-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+            -webkit-box-shadow: 3px 3px 30px rgba(0, 0, 0, .5);
+        }
+
+        summary {
+            left: 30vw;
+            font-size: 1.6rem;
+        }
+
+        @media screen and (min-width:667px)and (max-width: 1000px) {
+            main,
+            nav {
+                max-width: 810px;
+                margin: 0 auto;
+            }
+        }
+
+        @media screen and (min-width:667px) {
+            .burger {
+                display: none;
+            }
+            nav {
+                max-height: 200px;
+            }
+        }
+
+        main,
+        nav {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        #overskrifter {
+            text-align: center;
+            font-family: Open Sans Condense;
+        }
+
+        #overskrifter::first-letter {
+            text-transform: uppercase;
+        }
+        /*overskrift med store bogstaver*/
+
+        footer {
+            background: coler:
+        }
+
+        h2 {
+            font-family: Varela Round;
+            font-size: 50px;
+            word-break: break-all;
+            color: black;
+        }
+
+        #overskrift {
+            font-family: Varela Round;
+            font-size: 3rem;
+            color: black;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        p {
+            font-family: Open Sans Condense;
+            color: black;
+            font-size: 1.3rem
+        }
+    </style>
+</head>
+
+<body>
+    <section id="splash">
+        <div class="logo"> <img src="imgs/logo_babuskha.png" alt="logo"> </div>
+    </section>
+    <div class="popup">
+        <div class="popup-content">
+            <button id="luk">Close</button>
+            <h2 class="single-titel" data-titel>test</h2> <img scr="" alt="" class="info" data-billede>
+            <details open>
+                <summary>Beskrivelse</summary>
+                <p class="info" data-langbeskrivelse>Her er beskrivelse</p>
+            </details>
+        </div>
+    </div>
+    <div class="menu">
+        <button class="burger">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <nav>
+            <button id="filter-alle">Menu</button>
+            <button id="filter-forretter">Forretter</button>
+            <button id="filter-hovedretter">Hovedretter</button>
+            <button id="filter-desserter">Desserter</button>
+            <button id="filter-drikkevarer">Drikkevarer</button>
+        </nav>
+    </div>
+    <main>
+        <h1 id="overskrift" data-overskrift>MENU</h1>
+        <section id="menu-container" data-container></section>
+    </main>
+    <div class="templatemodtager"></div>
+    <template class="mytemplate">
+        <article id="data-ret" class="person">
+            <h1 class="navn"></h1> <img class="billede" src="" alt="">
+            <p class="kortbeskrivelse"></p>
+            <p class="langbeskrivelse"></p>
+            <p class="kategori"></p>
+            <article class="dessert"></article>
+            <p class="pris"></p>
+        </article>
+    </template>
+    <footer>
+        <div class="footer">
+            <div class="dropdown">
+                <a href="https://www.instagram.com"> <img src="imgs/if_instagram-social-media-logo_2220671.png" alt="instagram"> </a>
+            </div>
+            <div class="dropdown">
+                <a href="https://www.facebook.com"> <img src="imgs/if_facebook-social-media-logo_2220684.png" alt="facebook"> </a>
+            </div>
+            <p>©Bistro Babushka</p>
+        </div>
+    </footer>
+    <script>
+        let retter = [];
+        document.addEventListener("DOMContentLoaded", loadJson);
+        async function loadJson() {
+            let minListe = await fetch("menu.json");
+            retter = await minListe.json();
+            console.log(retter);
+            visPersoner(retter);
+            // find retter og filtrer retter efter kategori og gem dem i ny array
+            let forretter = retter.filter(ret => ret.kategori == "forretter");
+            let hovedretter = retter.filter(ret => ret.kategori == "hovedretter");
+            let desserter = retter.filter(ret => ret.kategori == "desserter");
+            let drikkevarer = retter.filter(ret => ret.kategori == "drikkevarer");
+            document.querySelector("#filter-alle").addEventListener("click", () => {
+                visPersoner(retter, "MENUEN");
+            });
+            document.querySelector("#filter-forretter").addEventListener("click", () => {
+                visPersoner(forretter, "FORRETTER");
+            });
+            document.querySelector("#filter-hovedretter").addEventListener("click", () => {
+                visPersoner(hovedretter, "HOVEDRETTER");
+            });
+            document.querySelector("#filter-desserter").addEventListener("click", () => {
+                visPersoner(desserter, "DESSERTER");
+            });
+            document.querySelector("#filter-drikkevarer").addEventListener("click", () => {
+                visPersoner(drikkevarer, "DRIKKEVARER");
+            });
+            visPersoner(retter, "");
+        }
+
+        function visPersoner(retter, overskrift) {
+            document.querySelector("[data-overskrift]").textContent = overskrift;
+            let modtager = document.querySelector(".templatemodtager");
+            let template = document.querySelector(".mytemplate");
+            modtager.innerHTML = "";
+            retter.forEach(hverPerson => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".navn").textContent = hverPerson.navn;
+                klon.querySelector(".billede").setAttribute("src", "imgs/small/" + hverPerson.billede + "-sm.jpg");
+                klon.querySelector(".billede").alt = "billede af" + hverPerson.billede;
+                klon.querySelector(".kortbeskrivelse").textContent = hverPerson.kortbeskrivelse;
+                klon.querySelector(".pris").textContent = hverPerson.pris + (" kr.");
+                klon.querySelector("#data-ret").setAttribute("data-id", hverPerson.id);
+                klon.querySelector("#data-ret").addEventListener("click", showSingle);
+                modtager.appendChild(klon);
+            })
+        }
+
+        function showSingle() {
+            //console.log("test");
+            let myId = this.getAttribute("data-id");
+            let single = retter.find(ret => {
+                //hvis myId og ret id matcher skal indholdet vises
+                if (myId == ret.id) {
+                    document.querySelector(".popup").style.visibility = "visible";
+                    document.querySelector("[data-titel]").textContent = ret.navn;
+                    document.querySelector("[data-langbeskrivelse]").textContent = ret.langbeskrivelse;
+                    document.querySelector("[data-billede]").src = "imgs/medium/" + ret.billede + "-md.jpg";
+                    modtager.appendChild(klon);
+                }
+            })
+        }
+        document.querySelector("#luk").addEventListener("click", hideSingle);
+
+        function hideSingle() {
+            document.querySelector(".popup").style.visibility = "hidden";
+        }
+
+        function toggleMenu() {
+            console.log("burger");
+            document.querySelector(".burger").classList.toggle("change");
+            document.querySelector("nav").classList.toggle("show");
+        }
+        document.querySelector(".burger").addEventListener("click", toggleMenu);
+        document.querySelector("nav").addEventListener("click", toggleMenu);
+    </script>
+</body>
+
+</html>
